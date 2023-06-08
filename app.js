@@ -1,29 +1,20 @@
 let bookLibrary = {};
 let jsonBooks = JSON.parse(localStorage.getItem('books'));
-document.addEventListener('DOMContentLoaded', () => {
-  if (jsonBooks) {
-    bookLibrary = jsonBooks;
-    Object.entries(bookLibrary).forEach(([key, value]) => {
-      const { tittle, author } = value;
-      insertBookHtml(tittle, author);
-    });
-  };
-})
 
-function addBook(tittle, author) {
-  bookLibrary[tittle] = {
-    tittle: tittle,
-    author: author
+function addBook(tittleName, authorName) {
+  bookLibrary[tittleName] = {
+    tittle: tittleName,
+    author: authorName,
   };
-  let jsonBooks = JSON.stringify(bookLibrary);
+  const jsonBooks = JSON.stringify(bookLibrary);
   localStorage.setItem('books', jsonBooks);
-};
+}
 
 function removeBook(bookName) {
   delete bookLibrary[`${bookName}`];
   jsonBooks = JSON.stringify(bookLibrary);
   localStorage.setItem('books', jsonBooks);
-};
+}
 
 const bookSection = document.querySelector('#library');  
 function insertBookHtml(tittle, author)  {
@@ -47,16 +38,26 @@ function insertBookHtml(tittle, author)  {
   div.appendChild(button);
   div.appendChild(hr);
   bookSection.appendChild(div);
-};
+}
 
 const form = document.querySelector('form');
 
-form.addEventListener("submit", (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-  let title = document.querySelector('#tittle-name').value;
-  let author = document.querySelector('#author-name').value;
+  const title = document.querySelector('#tittle-name').value;
+  const author = document.querySelector('#author-name').value;
   addBook(title, author);
   insertBookHtml(title, author);
   document.querySelector('#tittle-name').value = '';
   document.querySelector('#author-name').value = '';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (jsonBooks) {
+    bookLibrary = jsonBooks;
+    Object.entries(bookLibrary).forEach(([, value]) => {
+      const { tittle, author } = value;
+      insertBookHtml(tittle, author);
+    });
+  }
 });
