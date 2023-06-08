@@ -16,8 +16,9 @@ function removeBook(bookName) {
   localStorage.setItem('books', jsonBooks);
 }
 
-const bookSection = document.querySelector('#library');  
-function insertBookHtml(tittle, author)  {
+const bookSection = document.querySelector('#library');
+
+function insertBookHtml(tittle, author) {
   const div = document.createElement('div');
   const tittelName = document.createElement('h2');
   const authorName = document.createElement('h2');
