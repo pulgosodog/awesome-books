@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const bookSection = document.querySelector('#library');
 
-let jsonBooks = JSON.parse(localStorage.getItem('booksStorage'));
+let jsonBooks = [];
 let bookLibrary = [];
 
 class Books {
@@ -47,8 +47,6 @@ class Books {
   }
 }
 
-bookLibrary = jsonBooks.map((book) => new Books(book.title, book.author));
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = document.querySelector('#tittle-name').value;
@@ -63,6 +61,8 @@ form.addEventListener('submit', (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (jsonBooks) {
+    jsonBooks = JSON.parse(localStorage.getItem('booksStorage'));
+    bookLibrary = jsonBooks.map((book) => new Books(book.title, book.author));
     bookLibrary.forEach((n) => {
       n.insertBookHtml();
     });
