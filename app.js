@@ -29,7 +29,7 @@ class Books {
     const authorName = document.createElement('li');
     const button = document.createElement('button');
 
-    tittelName.textContent = `"${this.title }"`;
+    tittelName.textContent = `"${this.title}"`;
     authorName.textContent = this.author;
     button.textContent = 'Remove';
 
