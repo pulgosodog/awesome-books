@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const bookSection = document.querySelector('#library');
 
 let jsonBooks = JSON.parse(localStorage.getItem('booksStorage'));
+let bookLibrary = [];
 
 class Books {
   constructor(title, author) {
@@ -16,7 +17,7 @@ class Books {
   }
 
   removeBook() {
-    bookLibrary = bookLibrary.filter(books => books.title !== `${this.title}` && books.author !== `${this.author}`);
+    bookLibrary = bookLibrary.filter((books) => books.title !== `${this.title}` && books.author !== `${this.author}`);
     jsonBooks = JSON.stringify(bookLibrary);
     localStorage.setItem('booksStorage', jsonBooks);
   }
@@ -27,9 +28,8 @@ class Books {
     const tittelName = document.createElement('li');
     const authorName = document.createElement('li');
     const button = document.createElement('button');
-    const hr = document.createElement('hr');
 
-    tittelName.textContent = '"'+this.title+'"';
+    tittelName.textContent = '"' + this.title + '"';
     authorName.textContent = this.author;
     button.textContent = 'Remove';
 
@@ -40,20 +40,19 @@ class Books {
 
     ul.appendChild(tittelName);
     ul.appendChild(authorName);
-    div.appendChild(ul)
+    div.appendChild(ul);
     div.appendChild(button);
-    div.classList.add("book");
+    div.classList.add('book');
     bookSection.appendChild(div);
   }
 }
 
-let bookLibrary = [];
-bookLibrary = jsonBooks.map(book => new Books(book.title, book.author));
+bookLibrary = jsonBooks.map((book) => new Books(book.title, book.author));
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = document.querySelector('#tittle-name').value;
-  const author = 'by '+ document.querySelector('#author-name').value;
+  const author = `by ${document.querySelector('#author-name').value}`;
   const book = new Books(title, author);
   book.addBook();
   book.insertBookHtml();
@@ -66,6 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (jsonBooks) {
     bookLibrary.forEach((n) => {
       n.insertBookHtml();
-    })
+    });
   }
 });

@@ -2,7 +2,6 @@ body {
   font-family: "Comic Sans", cursive;
   display: flex;
   flex-direction: column;
-  ;
   align-items: center;
 }
 
@@ -19,7 +18,7 @@ section#library .book {
 }
 
 section#library .book:nth-child(odd) {
-  background-color: #DDDDDD;
+  background-color: #ddd;
 }
 
 section#library .book ul {
@@ -55,7 +54,7 @@ form {
   gap: 0.2vw;
 }
 
-form input{
+form input {
   font-family: inherit;
   border: 2px solid black;
 }
