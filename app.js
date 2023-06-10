@@ -17,12 +17,14 @@ class Books {
   }
 
   removeBook() {
-    bookLibrary = bookLibrary.filter((books) => books.title !== `${this.title}` && books.author !== `${this.author}`);
+    bookLibrary = bookLibrary.filter(
+      (books) => books.title !== `${this.title}` && books.author !== `${this.author}`
+    );
     jsonBooks = JSON.stringify(bookLibrary);
     localStorage.setItem('booksStorage', jsonBooks);
   }
 
-  insertBookHtml() {
+  async insertBookHtml() {
     const div = document.createElement('div');
     const ul = document.createElement('ul');
     const tittelName = document.createElement('li');
@@ -61,10 +63,10 @@ form.addEventListener('submit', (event) => {
   document.querySelector('#author-name').value = '';
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   if (jsonBooks) {
-    bookLibrary.forEach((n) => {
-      n.insertBookHtml();
-    });
+    for (const bookData of bookLibrary) {
+      await bookData.insertBookHtml();
+    }
   }
 });
