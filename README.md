@@ -4,7 +4,7 @@
   <img src="cat-black-face.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Portfolio Project Website</b></h3>
+  <h3><b>Awesome Books</b></h3>
 
 </div>
 
@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello Microverse <a name="about-project"></a>
+# 📖Awesome Books<a name="about-project"></a>
 
 Basic website that allows users to add/remove books from a list. Achieve it by using JavaScript objects, arrays and basic events to dynamically modifying the DOM.
 
@@ -63,6 +63,8 @@ Basic website that allows users to add/remove books from a list. Achieve it by u
 - **JavaScript DOM manipulation**
 - **JavaScript Objects**
 - **JavaScript Events**
+- **JavaScript Classes**
+- **Single-page application**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,7 +74,7 @@ Basic website that allows users to add/remove books from a list. Achieve it by u
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-### <a href="">No live build</a>
+### <a href="https://pulgosodog.github.io/awesome-books/">Live build</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
