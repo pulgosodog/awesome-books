@@ -38,7 +38,6 @@ nav ul a {
 nav ul img {
   width: 10%;
   height: 95%;
-
 }
 
 h1 {
@@ -71,6 +70,10 @@ section#library .book {
 
 section#library .book:nth-child(odd) {
   background-color: #ddd;
+}
+
+section#contact ul {
+  font-size: 1.5rem;
 }
 
 section#library .book ul {
@@ -147,7 +150,7 @@ section#contact h2 {
 
 footer#copyright {
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   border: 5px solid black;
   width: 95vw;
   margin: 0.5vw;
@@ -165,10 +168,6 @@ footer#copyright h2 {
 
 section#contact p {
   font-size: 1.8rem;
-}
-
-section#contact ul {
-  font-size: 1.5rem;
 }
 
 section#copyright p {
