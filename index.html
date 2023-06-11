@@ -10,20 +10,59 @@
 </head>
 
 <body>
-    <h1>All awesome Books</h1>
+    <header>
+        <nav>
+            <h1>Awesome Books</h1>
+            <ul>
+                <li><a href="#" onclick="list()">List</a></li>
+                <img src="images/or.png" alt="">
+                <li><a href="#" onclick="addNew()">Add new</a></li>
+                <img src="images/or.png" alt="">
+                <li><a href="#" onclick="contact()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <section id="library">
+        <h2>All awesome Books</h2>
+        <div id="book-list">
+
+        </div>
 
     </section>
 
-    <hr>
 
-    <h2>Add Book</h2>
-    <form action="submit">
-        <input type="text" name="title" id="tittle-name" placeholder="Tittle">
-        <input type="text" name="author" id="author-name" placeholder="Author">
-        <input id="form-btn" type="submit" value="Add">
-    </form>
+    <section id="add-new">
+        <h2>Add a new Book</h2>
+        <form action="submit">
+            <input type="text" name="title" id="tittle-name" placeholder="Tittle">
+            <input type="text" name="author" id="author-name" placeholder="Author">
+            <input id="form-btn" type="submit" value="Add">
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact information</h2>
+        <p>Do you have any questions or just want to say "Hello"?<br>
+        You can reach out to me!</p>
+        <ul>
+            <li>
+                My e-email: notmyemail@awesomebooks.com
+            </li>
+            <li>
+            My phone number: +505 777-777
+            </li>
+           <li>
+            My address: RealStreet 13st, 794613 Terabitia, Narnia.
+           </li>
+        </ul>
+    </section>
+    <section id="copyright">
+        <div>
+            <h2>Copyright</h2>
+            <p>...</p>
+        </div>
+    </section>
     <script src="app.js"></script>
+    <script src="spa.js"></script>
 </body>
 
 </html>

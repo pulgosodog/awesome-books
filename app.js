@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const bookSection = document.querySelector('#library');
+const bookSection = document.querySelector('#book-list');
 
 let jsonBooks = [];
 let bookLibrary = [];
