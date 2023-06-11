@@ -26,6 +26,10 @@ nav ul {
   padding: 0;
 }
 
+nav ul a.menu-item.first {
+  color: #5c7c99;
+}
+
 nav ul a {
   text-decoration: none;
   color: inherit;
@@ -141,7 +145,7 @@ section#contact h2 {
   font-size: 2.5rem;
 }
 
-section#copyright {
+footer#copyright {
   position: fixed;
   bottom: 0px;
   border: 5px solid black;
@@ -149,12 +153,12 @@ section#copyright {
   margin: 0.5vw;
 }
 
-section#copyright div {
+footer#copyright div {
   display: flex;
   align-items: center;
 }
 
-section#copyright h2 {
+footer#copyright h2 {
   font-size: 1.8rem;
   margin: 1vw 2vw;
 }

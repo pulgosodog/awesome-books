@@ -14,11 +14,11 @@
         <nav>
             <h1>Awesome Books</h1>
             <ul>
-                <li><a href="#" onclick="list()">List</a></li>
+                <li><a class="menu-item first" "#" onclick="list(this)">List</a></li>
                 <img src="images/or.png" alt="">
-                <li><a href="#" onclick="addNew()">Add new</a></li>
+                <li><a class="menu-item" href="#" onclick="addNew(this)">Add new</a></li>
                 <img src="images/or.png" alt="">
-                <li><a href="#" onclick="contact()">Contact</a></li>
+                <li><a class="menu-item" href="#" onclick="contact(this)">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -55,12 +55,12 @@
            </li>
         </ul>
     </section>
-    <section id="copyright">
+    <footer id="copyright">
         <div>
             <h2>Copyright</h2>
             <p>...</p>
         </div>
-    </section>
+    </footer>
     <script src="app.js"></script>
     <script src="spa.js"></script>
 </body>
